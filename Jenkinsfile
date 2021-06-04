@@ -14,7 +14,12 @@ pipeline {
         }
          stage('Deploy') {
             steps {
-                sh 'rm -rf RepoB'
+                sh ' if [ -d "RepositoryB" ]'
+                sh ' then '
+                sh '   echo "Directory /path/to/dir exists." '
+                sh ' else '
+                sh '  echo "Error: Directory /path/to/dir does not exists." '
+                sh ' fi '
                 echo 'Deploy'
             }
         }
