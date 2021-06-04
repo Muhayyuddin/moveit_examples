@@ -14,9 +14,7 @@ pipeline {
         }
          stage('Deploy') {
             steps {
-                 sh 'cd ../..'
-            	 sh 'mkdir RepoB'
-            	 sh 'rsync -av --exclude=".*" PipeLineProject/ RepoB/'
+                
                 echo 'Deploy'
             }
         }
