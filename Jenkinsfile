@@ -14,7 +14,7 @@ pipeline {
         }
          stage('Deploy') {
             steps {
-                
+                sh 'rm -rf RepoB'
                 echo 'Deploy'
             }
         }
